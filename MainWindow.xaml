@@ -1,0 +1,36 @@
+﻿<Window x:Class="MakeFrameRGreatAgain_.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MakeFrameRGreatAgain_"
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
+        mc:Ignorable="d"
+        Title="Framer 2.0" Height="450" Width="800"
+        Topmost ="True" Name="FramerWindow">
+    <Grid Name="ParentGrid">
+        <Grid Name="ProcGrid" Visibility="Hidden" Margin="125,65,10,10">
+            <ListBox HorizontalAlignment="Left" Height="334" Margin="10,10,0,0" VerticalAlignment="Top" Width="350" Background="#AADCD8D8" Name="ProcessList" MouseDoubleClick="ProcessList_DoubleClick" BorderBrush="#AADCD8D8" ScrollViewer.VerticalScrollBarVisibility="Disabled" BorderThickness="0"/>
+            <TextBox HorizontalAlignment="Left" Height="210" Margin="417,134,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="240" Name="ModulesList" IsReadOnly="True" FontFamily="Microsoft Sans Serif" Background="#AADCD8D8" BorderBrush="#AADCD8D8" BorderThickness="0"/>
+            <Button Content="Get Information" HorizontalAlignment="Left" Margin="567,109,0,0" VerticalAlignment="Top" Width="90" Click="GetInfo_Click" Background="#AADCD8D8" BorderBrush="#AADCD8D8"/>
+            <Button Content="Kill" HorizontalAlignment="Left" Margin="365,10,0,0" VerticalAlignment="Top" Width="100" Height="25" FontSize="18" FontFamily="Arial Black" Background="AliceBlue" Name="ProcessesKillButton" Click="ProcessesKillButton_Click"/>
+        </Grid>
+        <Grid Name="HardGrid" Visibility="Hidden" Margin="125,65,10,10">
+            <TreeView Margin="0,0,357,0" Name="Accessories" TreeViewItem.Selected="Accessories_Selected"/>
+            <TextBox HorizontalAlignment="Left" Height="334" Margin="448,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="199" IsReadOnly="True" Name="AccessoriesDisplay" FontSize="14" FontFamily="Trebuchet MS" />
+        </Grid>
+        <Grid Name="SettingsGrid" Visibility="Visible" Margin="125,65,10,10">
+            <Label Content="Double-Click" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="100" Height="30"/>
+            <Button HorizontalAlignment="Left" Margin="115,10,0,0" VerticalAlignment="Top" Width="75" Click="DoubleClickInteraction_Enable" Height="30" Name="DoubleClickButton"/>
+            <Button HorizontalAlignment="Left" Margin="115,45,0,0" VerticalAlignment="Top" Width="75" Height="30" Click="GifLoader_Enable" Name="GifLoaderButton"/>
+            <Label Content="Enable Gif" HorizontalAlignment="Left" Margin="10,45,0,0" VerticalAlignment="Top" Width="100" Height="30"/>
+        </Grid>
+        <!-- gif:ImageBehavior.AnimatedSource="Visual/GifLogo.gif"  gif:ImageBehavior.AnimationSpeedRatio="3" -->
+        <Image HorizontalAlignment="Left" Height="60" VerticalAlignment="Top" Width="280" Stretch="UniformToFill" Name="LogoImage"/>
+        <Menu HorizontalAlignment="Left" Height="344" Margin="10,65,0,0" VerticalAlignment="Top" Width="110" Background="Transparent">
+            <MenuItem Header="Processes" Width="110" Height="40" FontSize="20" FontFamily="SimSun-ExtB" FontWeight="Bold" Click="Process_Menu_Click"/>
+            <MenuItem Header="Hardware" Width="110" Height="40" FontSize="20" FontFamily="SimSun-ExtB" FontWeight="Bold" Click="Hardware_Menu_Click"/>
+            <MenuItem Header="Settings" Width="110" Height="40" FontSize="20" FontFamily="SimSun-ExtB" FontWeight="Bold" Click="Settings_Menu_Click"/>
+        </Menu>
+    </Grid>
+</Window>

@@ -1,0 +1,7 @@
+﻿It's kind of a README for developer.
+
+List of options:
+1. Disable/Enable double-click interaction with lists.
+2. Disable/Enable gif-loader
+
+FrameR gif is not copyrighted, do whatever you want to do with it, may put some censored things on it I really don't give a damn.
