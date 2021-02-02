@@ -91,16 +91,6 @@ namespace Binaries
             {
                 uiElement.Background = new SolidColorBrush(Color.FromRgb(0, 255, 0));
             }
-        }
-
-        /// <summary>
-        /// Initiates color of WPF element
-        /// </summary>
-        /// <param name="uiElement"></param>
-        /// <param name="color"></param>
-        public void InitiateColor(ContentControl uiElement, SolidColorBrush color)
-        {
-
-        }
+        
     }
 }
